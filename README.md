@@ -1,4 +1,4 @@
-# exprements.ipynb Line-by-Line Reference (With Usage Notes)
+# Reference (With Usage Notes)
 
 Each cell is reproduced with two layers of commentary:
 
@@ -449,4 +449,5 @@ Optional useful flags:
 streamlit run app.py --server.port 8502          # Run on custom port
 streamlit run app.py --server.headless true      # Headless mode (no browser auto-open)
 ```
+
 
