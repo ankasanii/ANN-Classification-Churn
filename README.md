@@ -411,8 +411,6 @@ To re-run training quickly (assuming CSV present):
 # 5. Predict with new input
 ```
 
-End of reference document.
-
 ---
 
 ## Streamlit App (`app.py`)
@@ -451,3 +449,4 @@ Optional useful flags:
 streamlit run app.py --server.port 8502          # Run on custom port
 streamlit run app.py --server.headless true      # Headless mode (no browser auto-open)
 ```
+
