@@ -412,3 +412,42 @@ To re-run training quickly (assuming CSV present):
 ```
 
 End of reference document.
+
+---
+
+## Streamlit App (`app.py`)
+
+The repository also includes a lightweight Streamlit application (`app.py`) that demonstrates interactive UI components (sidebar controls, caching, charts, metrics, downloads) you can extend with your churn model or other generative AI logic.
+
+### What `app.py` Does
+
+- Sets up a wide-layout Streamlit page with a title and description.
+- Provides sidebar inputs (`text_input`, `checkbox`, `button`) to personalize and refresh content.
+- Uses `@st.cache_data` to cache a synthetic DataFrame generation function for performance.
+- Displays:
+  - Dynamic sample DataFrame
+  - Bar chart of a shuffled score column
+  - Metrics (row count, averages, maxima)
+  - Threshold filtering and downloadable filtered CSV
+- Includes an expander summarizing showcased features.
+
+### Running the App
+
+Ensure dependencies are installed (at workspace root or the appropriate environment):
+
+```pwsh
+pip install -r requirements.txt
+```
+
+Then launch Streamlit from the project directory containing `app.py`:
+
+```pwsh
+streamlit run app.py
+```
+
+Optional useful flags:
+
+```pwsh
+streamlit run app.py --server.port 8502          # Run on custom port
+streamlit run app.py --server.headless true      # Headless mode (no browser auto-open)
+```
